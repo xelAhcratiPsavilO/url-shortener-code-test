@@ -28,7 +28,7 @@ $ rspec
 - Sinatra
 - Capybara
 
-## Room for immediate improvement:
+## Room for immediate improvement:
 - Dockerising the app
 - Further testing stubbing methods and edge cases i.e. receiving an empty form
 - Inputing parameters in http POST request as a JSON
