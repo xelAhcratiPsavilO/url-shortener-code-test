@@ -1,3 +1,4 @@
+require 'securerandom'
 require 'sinatra/base'
 
 class URL_Shortener < Sinatra::Base
@@ -5,6 +6,13 @@ class URL_Shortener < Sinatra::Base
     erb :landing_page
   end
 
-  # start the server if ruby file executed directly
-  run! if app_file == $0
+  post '/' do
+    @url = params[:url]
+    @short_url = shorten_url()
+    erb :results_page
+  end
+
+  def shorten_url
+    "http://localhost:9292/" + SecureRandom.urlsafe_base64(6)
+  end
 end
