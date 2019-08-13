@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class URL_Shortener < Sinatra::Base
   get '/' do
-    'Hello There!'
+    'Testing infrastructure working!'
   end
 
   # start the server if ruby file executed directly
